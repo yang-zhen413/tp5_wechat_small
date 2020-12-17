@@ -10,7 +10,7 @@ class Banner
 {
 	public function getBanner($id)
 	{
-		(new IdMustBeInt())->gocheck();
+		(new IdMustBeInt())->goCheck();
 		
 	}
 }
