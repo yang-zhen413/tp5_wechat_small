@@ -9,4 +9,4 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-Route::get("hello/:name", "index/hello");
+Route::get("banner/:id", "api/v1.Banner/getBanner");
