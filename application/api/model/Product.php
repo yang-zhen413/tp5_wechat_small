@@ -13,9 +13,4 @@ class Product extends BaseModel
 	{
 		return $this->prefixPath($value, $data);
 	}
-
-	public function Image()
-	{
-		return $this->belongsTo("Image", "img_id", "id");
-	}
 }
