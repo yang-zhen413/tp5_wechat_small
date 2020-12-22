@@ -9,7 +9,7 @@
  */
 
 return [
-	'app_id' => '',
-	'app_secret' => '',
+	'app_id' => 'wx41175def94a12a3b',
+	'app_secret' => 'dd7a61f35c1715f2c413ffa3bbe6ab05',
 	'login_url' => "https://api.weixin.qq.com/sns/jscode2session?appid=%s&secret=%s&js_code=%s&grant_type=authorization_code";
 ];
