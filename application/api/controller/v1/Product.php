@@ -28,4 +28,9 @@ class Product
     	$products->hidden(['summary']);
     	return $products;
     }
+
+    public function getAllInCategory($id = 0)
+    {
+        
+    }
 }
