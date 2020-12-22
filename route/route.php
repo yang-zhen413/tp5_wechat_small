@@ -9,8 +9,10 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
+// banner
 Route::get("api/:version/banner/:id", "api/:version.Banner/getBanner");
-
+// 主题
 Route::get("api/:version/theme", "api/:version.Theme/getSimpleList");
-
 Route::get("api/:version/theme/:id", "api/:version.Theme/getProductDetail");
+// 商品
+Route::get("api/:version/product/recent", "api/:version.Product/getRecent");

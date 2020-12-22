@@ -13,4 +13,16 @@ class Product extends BaseModel
 	{
 		return $this->prefixPath($value, $data);
 	}
+
+	/**
+	 * [getRecentData 获取最近商品]
+	 * @Author   JasonYang
+	 * @DateTime 2020-12-22T15:20:21+0800
+	 * @param    integer                  $count [条数]
+	 * @return   object                          [商品对象]
+	 */
+	public static function getRecentData($count = 0)
+	{
+		return self::limit($count)->order("create_time desc")->select();
+	}
 }
