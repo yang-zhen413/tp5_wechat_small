@@ -4,14 +4,21 @@
  * @Author: JasonYang
  * @Date:   2020-12-18 09:54:49
  * @Last Modified by:   JasonYang
- * @Last Modified time: 2020-12-18 13:26:19
+ * @Last Modified time: 2020-12-21 15:35:03
  * @Email: yangvvvvip@163.com
  */
 namespace app\api\model;
 
-use think\Model;
+class Banner extends BaseModel
+{
+	// 隐藏字段
+	protected $hidden = ['update_time', 'delete_time'];
 
-class Banner {
+	public function item()
+	{		
+		return $this->hasMany('BannerItem', 'banner_id', 'id');
+	}
+
 	/**
 	 * [getBannerById 根据id获取banner]
 	 * @Author   JasonYang
@@ -21,6 +28,6 @@ class Banner {
 	 */
 	public static function getBannerById($id)
 	{
-		return null;
+		return self::with(['item','item.image'])->find($id);
 	}
 }

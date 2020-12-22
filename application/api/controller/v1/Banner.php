@@ -10,9 +10,11 @@ class Banner
 	/**
 	 * 根据id获取banner信息
 	 * @url /banner/:id
-	 * @http GET
+	 * 
 	 * @param  integer  $id  
-	 * @throws 
+	 * 
+	 * @throws BannerException
+	 * @return 
 	 */
 	public function getBanner($id)
 	{
