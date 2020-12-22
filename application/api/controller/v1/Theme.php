@@ -3,8 +3,8 @@
 /**
  * @Author: JasonYang
  * @Date:   2020-12-21 17:10:17
- * @Last Modified by:   JasonYang
- * @Last Modified time: 2020-12-22 16:02:10
+ * @Last Modified by:   yang-zhen413
+ * @Last Modified time: 2020-12-22 17:04:00
  * @Email: yangvvvvip@163.com
  */
 namespace app\api\controller\v1;
@@ -38,6 +38,14 @@ class Theme
 		return $result;
 	}
 
+	/**
+	 * [getProductDetail 获取主题详情]
+	 * @Author   JasonYang
+	 * @DateTime 2020-12-22T17:03:02+0800
+	 * @url      /theme/:id
+	 * @param    integer                  $id [description]
+	 * @return   [type]                       [description]
+	 */
 	public function getProductDetail($id = 0)	
 	{
 		(new IdMustBeInt())->goCheck();

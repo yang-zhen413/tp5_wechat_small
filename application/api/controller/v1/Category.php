@@ -12,6 +12,7 @@ class Category
 	 * [getCateAll 获取全部分类]
 	 * @Author   JasonYang
 	 * @DateTime 2020-12-22T16:27:23+0800
+     * @url      /category/all
 	 * @return   [type]                   [description]
 	 * @throws   CateException
 	 */

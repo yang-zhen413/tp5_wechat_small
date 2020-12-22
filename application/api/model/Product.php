@@ -25,4 +25,16 @@ class Product extends BaseModel
 	{
 		return self::limit($count)->order("create_time desc")->select();
 	}
+
+	/**
+	 * [getProductsByCateId 根据分类id获取商品]
+	 * @Author   JasonYang
+	 * @DateTime 2020-12-22T17:06:37+0800
+	 * @param    integer                  $id [分类id]
+	 * @return   [type]                       [description]
+	 */
+	public static function getProductsByCateId($id = 0)
+	{
+		return self::where("category_id", "=", $id)->select();
+	}
 }
