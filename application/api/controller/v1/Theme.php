@@ -4,7 +4,7 @@
  * @Author: JasonYang
  * @Date:   2020-12-21 17:10:17
  * @Last Modified by:   JasonYang
- * @Last Modified time: 2020-12-22 13:08:28
+ * @Last Modified time: 2020-12-22 16:02:10
  * @Email: yangvvvvip@163.com
  */
 namespace app\api\controller\v1;
@@ -32,7 +32,7 @@ class Theme
 		(new IdCollection())->goCheck();
 
 		$result = ThemeModel::getThemeList($ids);
-		if (!$result) {
+		if ($result->isEmpty()) {
 			throw new ThemeException();
 		}
 		return $result;

@@ -22,9 +22,10 @@ class Product
     	(new Count())->goCheck();
 
     	$products = ProductModel::getRecentData($count);
-    	if (!$products) {
+    	if ($products->isEmpty()) {
     		throw new ProductException();
     	}
+    	$products->hidden(['summary']);
     	return $products;
     }
 }
