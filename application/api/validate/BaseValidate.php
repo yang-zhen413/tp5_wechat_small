@@ -44,6 +44,13 @@ class BaseValidate extends Validate
         }
     }
 
+    /**
+     * [isNotEmpty 自定义验证不为空]
+     * @Author   JasonYang
+     * @DateTime 2020-12-23T09:49:40+0800
+     * @param    [type]                   $value [description]
+     * @return   boolean                         [description]
+     */
     protected function isNotEmpty($value)
     {
     	if (empty($value)) {
